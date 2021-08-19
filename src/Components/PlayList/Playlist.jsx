@@ -7,16 +7,14 @@ const Playlist = (props) => {
   const loaded = () => (
     <div className="playlist">
       <h2>Playlist 1</h2>
-      <section clasName="song-data">
+      <section className="song-data">
         {list.map((song) => {
           <div key={song._id}>
             <Link to="/edit">
               <button
                 className="save"
                 onclick={() => {
-                  props.selectSong(song);
                   props.handleSave(song);
-                  props.history.push("/edit");
                 }}
               >
                 {"😍"}
@@ -24,6 +22,15 @@ const Playlist = (props) => {
             </Link>
             <h4>{song.title}</h4>
             <h4>{song.artist}</h4>
+            <button
+              className="edit"
+              onClick={() => {
+                props.selectSong(song);
+                props.history.push("/edit");
+              }}
+            >
+              Edit
+            </button>
             <button
               className="delete"
               onClick={() => {
@@ -41,7 +48,7 @@ const Playlist = (props) => {
 
   const loading = <h2>Loading...</h2>;
 
-  return list.length > 0 ? loaded() : loading;
+  return Playlist.length > 0 ? loaded() : loading;
 };
 
 export default Playlist;
