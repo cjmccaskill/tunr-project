@@ -10,7 +10,7 @@ const Playlist = (props) => {
       <section className="song-data">
         {list.map((song) => (
           <div key={song._id}>
-            <Link to="/edit">
+            <Link to="/">
               <button
                 className="save"
                 onClick={() => {
