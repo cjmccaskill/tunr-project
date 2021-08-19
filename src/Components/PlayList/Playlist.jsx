@@ -1,4 +1,5 @@
 import React from "react";
+import "./Playlist.css";
 import { Link } from "react-router-dom";
 
 const Playlist = (props) => {
