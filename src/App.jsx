@@ -15,15 +15,13 @@ function App() {
   const emptySong = {
     artist: "",
     title: "",
-    length: "",
+    time: "",
   };
 
   const [selectedSong, setSelectedSong] = useState(emptySong);
   const selectSong = (song) => {
     setSelectedSong(song);
   };
-
-  console.log("select song -", selectSong);
 
   const getSongs = async () => {
     const response = await fetch(url + "/songs");
