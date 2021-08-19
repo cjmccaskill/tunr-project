@@ -30,7 +30,7 @@ const FavList = (props) => {
 
   const loading = "Loading...";
 
-  return FavList.length > 0 ? loaded : loading;
+  return FavList.length > 0 ? loaded() : loading;
 };
 
 export default FavList;

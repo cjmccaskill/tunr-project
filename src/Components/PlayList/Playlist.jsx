@@ -8,12 +8,12 @@ const Playlist = (props) => {
     <div className="playlist">
       <h2>Playlist 1</h2>
       <section className="song-data">
-        {list.map((song) => {
+        {list.map((song) => (
           <div key={song._id}>
             <Link to="/edit">
               <button
                 className="save"
-                onclick={() => {
+                onClick={() => {
                   props.handleSave(song);
                 }}
               >
@@ -40,12 +40,11 @@ const Playlist = (props) => {
               {"❌"}
             </button>
             <h4>{song.time}</h4>
-          </div>;
-        })}
+          </div>
+        ))}
       </section>
     </div>
   );
-
   const loading = <h2>Loading...</h2>;
 
   return Playlist.length > 0 ? loaded() : loading;
