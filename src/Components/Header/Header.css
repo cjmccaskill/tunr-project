@@ -1,0 +1,25 @@
+.nav {
+    border-bottom-style: solid;
+    border-color: #a83f55;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.nav-logo {
+   color: #1A323C;
+   text-shadow: 1px 1px 0px #798083;
+   font-size: 1.25em;
+}
+
+h1{
+    margin-bottom: 0;
+}
+
+h4{
+    margin-top: 0;
+}
+
+.nav-item {
+    color: #484D6E;
+    text-align: right;
+}
