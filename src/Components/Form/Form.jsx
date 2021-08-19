@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Form.css";
 
 const Form = (props) => {
-  const [formData, setFormData] = useState([]);
+  const [formData, setFormData] = useState(props.song);
 
   const handleSubmit = (event) => {
     event.preventDefault();
