@@ -45,7 +45,7 @@ function App() {
   };
 
   const handleUpdate = async (song) => {
-    await fetch(url + "/songs/" + song.id, {
+    await fetch(url + "/songs/" + song._id, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -56,7 +56,7 @@ function App() {
   };
 
   const handleDelete = async (song) => {
-    await fetch(url + "/songs/" + song.id, {
+    await fetch(url + "/songs/" + song._id, {
       method: "delete",
     });
     getSongs();
